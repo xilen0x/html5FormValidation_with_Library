@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -19,7 +19,7 @@
                     <div class="card-header">
                         <h2>Payment form example</h2>
                     </div>
-                    <Form>
+                    <form id="myForm" onsubmit="return validar()">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
@@ -97,7 +97,7 @@
 
                             <div class="form-row">
                                 <div class="col-md-6">
-                                    <div class="form-group">
+                                    <div class="form-group" onsubmit= "return validateRadio()">
                                         <label>We accept:</label><br><br>
                                         
                                         <div class="custom-control custom-radio custom-control-inline">
@@ -143,17 +143,18 @@
                         <div class="card-footer justify-content-end">
                             <!-- Utilicé aqui (d-flex justify-content-end) para alinear el botón al final de la fila -->
                             <button type="button" class="btn btn-secondary float-right">Cancel</button>
-                            <button id="enviar" type="button" class="btn btn-primary float-right">Send</button>
+                            <button type="submit" class="btn btn-primary float-right">Send</button>
                    
                         </div>
-                    </Form>
+                    </form>
                 </div>
             </div>
 
         </div>
 
     </div>
-
+    <script src="validator.min.js"></script>
+    <script src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
