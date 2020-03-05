@@ -1,3 +1,5 @@
+document.getElementById("alerta").classList.add("invisible");
+
 let form = document.querySelector("form"); //accedo al contenido del formulario y almacno su contenido en la variable form.
 
 function validar(e) {
@@ -12,60 +14,65 @@ function validar(e) {
     }
 
     if (!validator.isEmpty(form.fcvc.value)) {
-        //aki quede!!!!!!!
+        fcvc = true;
     }
     else {
         form.fcvc.style.backgroundColor = '#f5adab';
     }
 
     if (!validator.isEmpty(form.famount.value)) {
-        
+        famount = true;
     }
     else {
         form.famount.style.backgroundColor = '#f5adab';
     }
 
     if (!validator.isEmpty(form.f_name.value)) {
-
+        f_name = true;
     }
     else {
         form.f_name.style.backgroundColor = '#f5adab';
     }
 
     if (!validator.isEmpty(form.l_name.value)) {
-
+        l_name = true;
     }
     else {
         form.l_name.style.backgroundColor = '#f5adab';
     }
 
     if (!validator.isEmpty(form.city.value)) {
-
+        city = true;
     }
     else {
         form.city.style.backgroundColor = '#f5adab';
     }
 
     if (!validator.isEmpty(form.state.value)) {
-
+        state = true;
     }
     else {
         form.state.style.backgroundColor = '#f5adab';
     }
 
     if (!validator.isEmpty(form.pcode.value)) {
-
+        pcode = true;
     }
     else {
         form.pcode.style.backgroundColor = '#f5adab';
     }
 
     if (!validator.isEmpty(form.comentario.value)) {
-
+        comentario = true;
     }
     else {
         form.comentario.style.backgroundColor = '#f5adab';
     }
+
+    if (fcard && fcvc && famount && f_name && l_name && city && state && pcode && comentario == true) {
+        document.getElementById("alerta").classList.remove("invisible");
+    }
+
 
 }
 
